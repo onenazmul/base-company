@@ -2,16 +2,16 @@
   <div class="home-content">
     <div class="hero-area">
       <b-container>
-        <b-row>
+        <b-row class="hero-content">
           <b-col md="6">
-            <div class="hero-content">
+            <div class="hero-content-inner">
               <h1>
-                A digital agency shaping your <br />best ideas into products
+                Level-Up Your Tech Skill
               </h1>
-              <h3>
+              <h4 class="mt-3 mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Commodi, qui?
-              </h3>
+                Commodi, qui
+              </h4>
               <nuxt-link to="/services" class="btn btn-primary"
                 >Start your Project</nuxt-link
               >
@@ -19,6 +19,11 @@
                 >Choose your course</nuxt-link
               >
             </div>
+          </b-col>
+          <b-col md="6 text-right">
+            <b-img
+              src="https://www.portotheme.com/wordpress/porto/seo/wp-content/uploads/sites/93/2019/05/seo-charts.png"
+            ></b-img>
           </b-col>
         </b-row>
       </b-container>
@@ -274,15 +279,23 @@
         </b-row>
       </b-container>
     </div>
+    <div class="home-carousel grey-bg">
+      <b-container fluid="true">
+        <carousel></carousel>
+      </b-container>
+    </div>
   </div>
 </template>
 
 <script>
+import Carousel from '@/components/global/Carousel'
 export default {
-  /* eslint-disable */
-  head: {
-    title: 'Bijoy Tech'
-  }
+  head() {
+    return {
+      title: 'Homepage'
+    }
+  },
+  components: { Carousel }
 }
 </script>
 
@@ -301,14 +314,19 @@ export default {
   color: #fff;
 }
 .hero-content {
-  padding-top: 15%;
+  padding-top: 14vh;
+  padding-bottom: 14vh;
+}
+.hero-content img {
+  max-height: 40vh;
+  margin-top: -6vh;
 }
 .hero-content h3 {
   margin: 18px 0 30px;
 }
 
 .common-area {
-  padding: 75px;
+  padding: 75px 0;
   position: relative;
 }
 .single-box {
@@ -385,6 +403,21 @@ export default {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .top-part,
+  .top-part .text-right {
+    text-align: center;
+  }
+  .top-part {
+    font-size: 0.8em;
+  }
+  .hero-content {
+    padding: 80px 0;
+  }
+  .hero-content img {
+    margin-top: 0;
   }
 }
 </style>

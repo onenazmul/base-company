@@ -268,6 +268,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      courses: [{ title: 'Course one', duration: '6 Months' }]
+    }
+  },
   /* eslint-disable */
   head: {
     title: 'Courses - Bijoy Tech'

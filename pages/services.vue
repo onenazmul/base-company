@@ -263,7 +263,7 @@
 export default {
   /* eslint-disable */
   head: {
-    title: 'Services - Bijoy Tech'
+    title: 'Services'
   }
 }
 </script>
